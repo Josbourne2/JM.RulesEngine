@@ -34,7 +34,12 @@ namespace JM.RulesEngine.ConsoleDemo
                       options.ConnectionMode(Microsoft.Azure.Cosmos.ConnectionMode.Direct);
                       options.MaxRequestsPerTcpConnection(20);
                       options.MaxTcpConnectionsPerEndpoint(32);
-                  }));
+                      
+                  }
+                  )
+                
+                
+                );
 
             services.AddTransient<InitService>();
             using var serviceProvider = services.BuildServiceProvider();

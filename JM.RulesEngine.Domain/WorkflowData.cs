@@ -14,8 +14,8 @@ namespace JM.RulesEngine.Domain
         public new List<RuleData> Rules { get; set; }
         public new List<ScopedParamData> GlobalParams { get; set; }
         public new string WorkflowName { get; set; }
-        [NotMapped]
-        public new IEnumerable<string> WorkflowsToInject { get; set; }
+        
+        public new IList<string> WorkflowsToInject { get; set; }
 
         [JsonIgnore]
         public int Seq { get; set; }
@@ -35,9 +35,8 @@ namespace JM.RulesEngine.Domain
 
         [JsonIgnore]
         public int Seq { get; set; }
-
-        [NotMapped]
-        public new IEnumerable<string> WorkflowsToInject { get; set; }
+        
+        public new IList<string> WorkflowsToInject { get; set; }
     }
 
     /// <summary>

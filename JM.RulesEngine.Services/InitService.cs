@@ -1,6 +1,8 @@
 ﻿using JM.RulesEngine.Data;
 using JM.RulesEngine.Domain;
+using Microsoft.Azure.Cosmos;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Cosmos.Storage.Internal;
 using Microsoft.EntityFrameworkCore.Internal;
 using Newtonsoft.Json;
 using System;
@@ -40,8 +42,17 @@ namespace JM.RulesEngine.Services
             var workFlow = JsonConvert.DeserializeObject<WorkflowData>(workFlowFile);
 
             using var context = await _contextFactory.CreateDbContextAsync();
+            //var cosmosClient = context.Database.GetCosmosClient();//.ClientOptions.SerializerOptions.IgnoreNullValues = true;
+            //var ser = new JsonCosmosSerializer();
+            //ser.
 
-            if(workFlow != null)
+            //var serialzierOptions = new CosmosSerializationOptions()
+            //{
+            //    IgnoreNullValues = true
+            //};
+            //cosmosClient.ClientOptions.SerializerOptions = serialzierOptions;
+            //cosmosClient.ClientOptions.SerializerOptions.IgnoreNullValues = true;
+            if (workFlow != null)
             {
                 context.Add(workFlow);
             }

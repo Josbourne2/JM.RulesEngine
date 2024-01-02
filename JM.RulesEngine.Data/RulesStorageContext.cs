@@ -15,15 +15,17 @@ namespace JM.RulesEngine.Data
     {
         public RulesStorageContext(DbContextOptions<RulesStorageContext> options) : base(options)
         {
+            
         }
 
         public DbSet<WorkflowData> Workflows { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            //builder.Entity<T>().
             
             builder.Entity<WorkflowData>()
-                    .HasNoDiscriminator()
+                    .HasNoDiscriminator()                    
                     .ToContainer(nameof(WorkflowData))
                     .HasPartitionKey( x=>x.References)                    
                     .HasKey(x => x.Id);
