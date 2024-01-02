@@ -1,4 +1,5 @@
 ﻿using JM.RulesEngine.Domain;
+using Microsoft.Azure.Cosmos;
 using Microsoft.EntityFrameworkCore;
 using RulesEngine.Models;
 using System;
@@ -20,10 +21,11 @@ namespace JM.RulesEngine.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            
             builder.Entity<WorkflowData>()
                     .HasNoDiscriminator()
                     .ToContainer(nameof(WorkflowData))
-                    .HasPartitionKey(x => new { x.References, x.ReferenceId })
+                    .HasPartitionKey( x=>x.References)                    
                     .HasKey(x => x.Id);
         }
     }

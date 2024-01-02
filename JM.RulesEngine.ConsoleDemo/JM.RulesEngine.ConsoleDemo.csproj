@@ -14,10 +14,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JM.RulesEngine.Data\JM.RulesEngine.Data.csproj" />
+    <ProjectReference Include="..\JM.RulesEngine.Services\JM.RulesEngine.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Discount.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -1,11 +1,12 @@
 ﻿using Newtonsoft.Json;
 using RulesEngine.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JM.RulesEngine.Domain
 {
     public class WorkflowData : Workflow
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string References { get; set; }
@@ -13,6 +14,8 @@ namespace JM.RulesEngine.Domain
         public new List<RuleData> Rules { get; set; }
         public new List<ScopedParamData> GlobalParams { get; set; }
         public new string WorkflowName { get; set; }
+        [NotMapped]
+        public new IEnumerable<string> WorkflowsToInject { get; set; }
 
         [JsonIgnore]
         public int Seq { get; set; }
@@ -20,6 +23,7 @@ namespace JM.RulesEngine.Domain
 
     public class RuleData : Rule
     {
+        public string References { get; set; }
         public new List<RuleData> Rules { get; set; }
         public new List<ScopedParamData> LocalParams { get; set; }
 
@@ -31,6 +35,9 @@ namespace JM.RulesEngine.Domain
 
         [JsonIgnore]
         public int Seq { get; set; }
+
+        [NotMapped]
+        public new IEnumerable<string> WorkflowsToInject { get; set; }
     }
 
     /// <summary>

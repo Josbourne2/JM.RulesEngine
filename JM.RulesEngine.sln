@@ -4,12 +4,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{83118677-9BF5-4430-A2E9-F7E89D73042F}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\TestData\Discount.json = Resources\TestData\Discount.json
+		Resources\TestData\DiscountInputs.json = Resources\TestData\DiscountInputs.json
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JM.RulesEngine.Domain", "JM.RulesEngine.Domain\JM.RulesEngine.Domain.csproj", "{2386C0E4-DF45-462C-8369-61140A9C5E9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JM.RulesEngine.Domain", "JM.RulesEngine.Domain\JM.RulesEngine.Domain.csproj", "{2386C0E4-DF45-462C-8369-61140A9C5E9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JM.RulesEngine.Data", "JM.RulesEngine.Data\JM.RulesEngine.Data.csproj", "{2D82AD19-0E49-400B-A4D7-39DBB8C8B19C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JM.RulesEngine.Data", "JM.RulesEngine.Data\JM.RulesEngine.Data.csproj", "{2D82AD19-0E49-400B-A4D7-39DBB8C8B19C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JM.RulesEngine.ConsoleDemo", "JM.RulesEngine.ConsoleDemo\JM.RulesEngine.ConsoleDemo.csproj", "{1E5523CC-9D01-4320-AFE1-E413C70DA3A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JM.RulesEngine.ConsoleDemo", "JM.RulesEngine.ConsoleDemo\JM.RulesEngine.ConsoleDemo.csproj", "{1E5523CC-9D01-4320-AFE1-E413C70DA3A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JM.RulesEngine.Tests", "JM.RulesEngine.Tests\JM.RulesEngine.Tests.csproj", "{3305537A-A981-4231-AC8E-A1AFDED925B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JM.RulesEngine.Services", "JM.RulesEngine.Services\JM.RulesEngine.Services.csproj", "{1F5F4B2F-E935-4C24-BA44-76B4E4AC92F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +37,14 @@ Global
 		{1E5523CC-9D01-4320-AFE1-E413C70DA3A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E5523CC-9D01-4320-AFE1-E413C70DA3A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E5523CC-9D01-4320-AFE1-E413C70DA3A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3305537A-A981-4231-AC8E-A1AFDED925B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3305537A-A981-4231-AC8E-A1AFDED925B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3305537A-A981-4231-AC8E-A1AFDED925B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3305537A-A981-4231-AC8E-A1AFDED925B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5F4B2F-E935-4C24-BA44-76B4E4AC92F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5F4B2F-E935-4C24-BA44-76B4E4AC92F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5F4B2F-E935-4C24-BA44-76B4E4AC92F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5F4B2F-E935-4C24-BA44-76B4E4AC92F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

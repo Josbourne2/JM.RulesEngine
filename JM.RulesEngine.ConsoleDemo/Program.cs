@@ -1,13 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using JM.RulesEngine.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 
 namespace JM.RulesEngine.ConsoleDemo
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
 
@@ -33,6 +35,12 @@ namespace JM.RulesEngine.ConsoleDemo
                       options.MaxRequestsPerTcpConnection(20);
                       options.MaxTcpConnectionsPerEndpoint(32);
                   }));
+
+            services.AddTransient<InitService>();
+            using var serviceProvider = services.BuildServiceProvider();
+            var initService = serviceProvider.GetRequiredService<InitService>();
+
+            await initService.RunSample();
         }
     }
 }
