@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using JM.RulesEngine.Data;
 namespace JM.RulesEngine.API
 {
     public class Program
@@ -14,6 +15,9 @@ namespace JM.RulesEngine.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddHttpContextAccessor();
+            var connectionString = builder.Configuration.GetConnectionString("CosmosConnectionString");
+            
+            builder.Services.AddApplicationDbContext(connectionString);
 
             var app = builder.Build();
 
