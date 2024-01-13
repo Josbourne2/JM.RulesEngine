@@ -1,0 +1,48 @@
+{
+  "UId": "bd4ca651-3ee5-4295-813f-f4b70680fbc4",
+  "Name": "303",
+  "References": "Sublocation",
+  "ReferenceId": "e47b27e6-b1a6-42b7-b4ea-cd0c0bbca4f1",
+  "LocationUId": "e47b27e6-b1a6-42b7-b4ea-cd0c0bbca4f1",
+  "LocationName": "Het Nieuwe Eemland",
+  "ResourceTypeName": "Lokaal",
+  "ResourceTypeUId": "5838fa25-1fd4-424a-b118-6d65b9333352",
+  "Etag": null,
+  "CustomerUId": "752cbbf1-6bcb-4304-a4ce-f2f02f5e0a63",
+  "CustomerName": "Het Nieuwe Eemland",
+  "LastActivityTime": "2022-10-21T05:30:01.2752917Z",
+  "LastTwinUpdate": "2022-10-21T05:30:01.2753522Z",
+  "Measurements": {
+    "TEMP": {
+      "Value": 27.0,
+      "Timestamp": "2022-10-21T05:27:15.1887468",
+      "Source": "Device 5d4e4ce8-313b-435d-9c2a-6160a31457af"
+    },
+    "RH": {
+      "Value": 56.0,
+      "Timestamp": "2022-10-21T05:27:15.1887468",
+      "Source": "Device 5d4e4ce8-313b-435d-9c2a-6160a31457af"
+    },
+    "CO2": {
+      "Value": 452.0,
+      "Timestamp": "2022-10-21T05:27:15.1887468",
+      "Source": "Device 5d4e4ce8-313b-435d-9c2a-6160a31457af"
+    },
+    "BAT": {
+      "Value": 3.2,
+      "Timestamp": "2022-10-21T05:27:15.1887468",
+      "Source": "Device 5d4e4ce8-313b-435d-9c2a-6160a31457af"
+    },
+    "DB": {
+      "Value": 37.0,
+      "Timestamp": "2022-10-21T05:27:15.1887468",
+      "Source": "Device 5d4e4ce8-313b-435d-9c2a-6160a31457af"
+    },
+    "Tags": [
+      {
+        "Key": "MijnWaarde",
+        "Value": "Dit is een opmerking over deze sublocatie."
+      }
+    ]
+  }
+}
