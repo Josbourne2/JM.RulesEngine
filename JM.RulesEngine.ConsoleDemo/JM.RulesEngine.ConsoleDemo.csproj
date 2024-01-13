@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JM.RulesEngine.Data\JM.RulesEngine.Data.csproj" />
-    <ProjectReference Include="..\JM.RulesEngine.Services\JM.RulesEngine.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

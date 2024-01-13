@@ -1,0 +1,52 @@
+{
+  "id": "0e4fbb78-acb3-499b-98f7-1bf4a263eff8",
+  "references": "Sublocation",
+  "referenceId": "e47b27e6-b1a6-42b7-b4ea-cd0c0bbca4f1",
+  "Name": "Temperature",
+  "Description": "Sweat sweat sweat",
+  "Workflow": {
+    "WorkflowName": "SweatCheck",
+    "Rules": [
+      {
+        "RuleName": "TempSweatCheck",
+        "ErrorMessage": "Rule conditions were not met by the input.",
+        "Enabled": true,
+        "ErrorType": "Warning",
+        "RuleExpressionType": "LambdaExpression",
+        "Expression": "Convert.ToDecimal(Measurements.TEMP.Value) > 1",
+        "Actions": {
+          "OnSuccess": {
+            "Name": "SendEmail",
+            "Context": {
+              "ActionInput": "Rule Temp has been triggered with input erik@senmo.nl."
+            }
+          }
+        },
+        "SuccessEvent": ""
+      }
+    ]
+  },
+  "EditModel": {
+    "WorkflowName": "Waterleakage",
+    "Description": "Waterleakage alarm to email",
+    "Conditions": [
+      {
+        "SensorCode": "water_leak",
+        "Operator": 1,
+        "Value": "1",
+        "LogicalOperator": 1
+      }
+    ],
+    "Action": {
+      "OnSuccess": false,
+      "Name": "SendEmail",
+      "Input": "erik@senmo.nl"
+    },
+    "ConditionsJson": "[{\"SensorCode\":\"water_leak\",\"Operator\":\"1\",\"LogicalOperator\":\"1\",\"Value\":\"1\"}]"
+  },
+  "_rid": "F35LALcRaNMFAAAAAAAAAA==",
+  "_self": "dbs/F35LAA==/colls/F35LALcRaNM=/docs/F35LALcRaNMFAAAAAAAAAA==/",
+  "_etag": "\"5902af0c-0000-0d00-0000-65a2f7c50000\"",
+  "_attachments": "attachments/",
+  "_ts": 1705179077
+}
