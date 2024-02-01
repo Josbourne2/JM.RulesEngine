@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using JM.RulesEngine.Data;
+using MediatR;
 
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,11 @@ namespace JM.RulesEngine.Application.Rules.Queries.EvaluateRulesQuery
 {
     public class EvaluateRulesQueryHandler : IRequestHandler<EvaluateRulesQuery, EvaluateRulesQueryResponse>
     {
+        private readonly RulesStorageContext _context;
 
-        public EvaluateRulesQueryHandler()
+        public EvaluateRulesQueryHandler(RulesStorageContext context)
         {
+            _context = context;
         }
 
         public async Task<EvaluateRulesQueryResponse> Handle(EvaluateRulesQuery request, CancellationToken cancellationToken)
@@ -27,7 +30,7 @@ namespace JM.RulesEngine.Application.Rules.Queries.EvaluateRulesQuery
             }
 
             //Get rules
-
+            var rules = await _context.Workflows().ToListAsync(cancellationToken);
 
 
             //Filter rules by property
